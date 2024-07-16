@@ -85,6 +85,7 @@ function scorerPrompt() {
    
  return scoringAlgorithms[choice];
 }
+
 function transform(oldPointStructure) {
    let newPointStructure = {};
    for (let pointValue in oldPointStructure) {
@@ -95,8 +96,8 @@ function transform(oldPointStructure) {
    }
 return newPointStructure;
 }
-   
-const newPointStructure = transform(oldPointStructure);
+
+let newPointStructure = transform(oldPointStructure);
     
    function scrabbleScorer(word) {
       word = word.toLowerCase();
