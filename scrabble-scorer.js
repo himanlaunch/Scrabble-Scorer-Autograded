@@ -33,12 +33,11 @@ function oldScrabbleScorer(word) {
 // don't change the names or your program won't work as expected. //
 
 function initialPrompt() {
-   console.log("Let's play some scrabble! Enter a word:");
-   let word = input.question();
-   let selectedAlgorithm = scorerPrompt();
-   let score = selectedAlgorithm.scorerFunction(word);
-   console.log(`Score for '${word}': ${score}`);
+  console.log("Let's play some scrabble! Enter a word:");
+  let word = input.question();
+  return word;
 };
+
 function simpleScorer(word) {
    return word.length;
  }
@@ -111,7 +110,10 @@ let newPointStructure = transform(oldPointStructure);
    }
 
 function runProgram() {
-   initialPrompt();
+  let word = initialPrompt();
+  let selectedAlgorithm = scorerPrompt();
+  let score = selectedAlgorithm.scorerFunction(word);
+  console.log(`Score for '${word}': ${score}`);
    
 }
 
